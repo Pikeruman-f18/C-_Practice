@@ -12,6 +12,6 @@ int main()
     //0~9の乱数を生成する
     int lucky = rand() % 10; 
 
-    printf("今日のラッキーナンバーは【%d】です！\n", &lucky);
+    printf("今日のラッキーナンバーは【 %d 】です！\n", lucky);
 
 }
