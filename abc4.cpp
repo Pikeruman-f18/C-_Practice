@@ -8,6 +8,15 @@
 
 int main ()
 {
+    int H;
+    int cnt = 0;
+
+    scanf("%d", &H);
+
+    while(H>1)
+    {
+        
+    }
     
 
 
