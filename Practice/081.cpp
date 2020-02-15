@@ -11,7 +11,7 @@ int main()
     int cnt = 0;
 
     cin>>s;
-
+    int test = 0;
     if(s[0] == '1')
     {
         cnt++;
