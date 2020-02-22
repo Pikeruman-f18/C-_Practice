@@ -9,5 +9,19 @@ int main()
     cin.tie(0);
     ios::sync_with_stdio(false);
 
+    int n, r,k;
+    cin>>n>>r;
+
+    if(n < 10)
+    {
+        k = 100 * (10 - n);
+        cout<<(r + k)<<endl;
+    }
+    else
+    {
+        cout<<r<<endl;
+    }
+    
+
     return 0;
 }
