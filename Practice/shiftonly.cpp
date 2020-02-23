@@ -8,56 +8,40 @@ int main()
 {
     cin.tie(0);
     ios::sync_with_stdio(false);
+
+    int n, x;
+    int a[200];
+    int flag = 0;
+    int cnt = 0;
+
+    cin>>n;
+
+    rep(i,n) cin>>a[i];
+
+    rep(i,n)
+    {
+        rep(i,n)
+        {
+            if(a[i] % 2 != 0)
+            {
+                flag++;
+            }
+        }
+
+        if(flag != 0)
+        {
+            break;
+        }
+
+        rep(i,n)
+        {
+            a[i] /= 2;
+        }
+
+        cnt++;
+    }
     
-    int N, a, ans, cnt;
-    cnt = 0;
-    cin>>N;
-    vector<int> A;
-
-    for(int i = 0; i<N; i++)
-    {
-        cin>>a;
-        A.push_back(a);
-    }
-
-    int i = 0;
-    int flag = 1;
-    while(flag == 1)
-    {
-       if(A.at(i) % 2 != 0)
-       {
-           cout<<"0";
-           cout<<"\n";
-           return 0;
-       }
-       else
-       {
-           ans = A.at(i) / 2;
-           
-           if(ans % 2 != 0)
-           {
-               cout<<"0";
-               cout<<"\n";
-           
-           }
-           
-           A.at(i) = ans;
-           
-       }
-       if(i<N)
-       {
-          i++;
-       }
-       else
-       {
-           i = 0;
-       }
-       cnt++;
-    }
-
-    cout<<cnt;
-    cout<<"\n";
-
+    cout<<cnt<<endl;
 
     return 0;
 }

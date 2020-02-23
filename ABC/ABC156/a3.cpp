@@ -3,36 +3,32 @@
 using namespace std;
 using ll = long long;
 using P = pair<int,int>;
+const int inf = 1000000000;
 
 int main()
 {
     cin.tie(0);
     ios::sync_with_stdio(false);
-    
-    int n, y;
-    vector<int> x;
-    vector<int> ans;
-    int ans2 = 0;
-    cin>>n;
 
-    for(int i = 0; i<n; i++)
+    int n;
+    cin >> n;
+    vector<int> X(n);
+
+    rep(i,n) cin >> X[i];
+
+    int L = X[0], R = X[0];
+    rep(i,n)
     {
-        cin>>y;
-        x.push_back(y);
+        L = min(L, X[i]);
+        R = max(R, X[i]);
     }
 
-    for(int i = 0; i<n; i++)
-    {
-         ans.push_back((x.at(i) - n) * (x.at(i) - n));
-    }
+    int ans = inf;
 
-    for(int i = 0; i<n; i++)
+    for(int i = L; i<=R; i++)
     {
-        sort(ans.begin(), ans.end());
-        ans2 += ans.at(i);
+        
     }
-
-    cout<<ans2<<endl;
 
     return 0;
 }
