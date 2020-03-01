@@ -10,30 +10,28 @@ int main()
     cin.tie(0);
     ios::sync_with_stdio(false);
 
-    int n, div2,max,cnt = 0;
-    vector<int> a;
-    bool flag = false;
+    int n;
     cin>>n;
 
-    //a.push_back(n);
+    int i = 1;
 
-    div2 = n;
-
-    while(n>0)
+    while(1)
     {
-        if(div2 % 2 == 0)
+        if(i < n)
         {
-            max = n;
-            div2 /= 2;
-            cnt++;
+            i *= 2;
         }
-
-        if(n % 2 != 0)
+        else if (i == n) 
         {
-            n -= 1;
+            break;
         }
-
+        else
+        {
+            i /= 2;
+            break;
+        }
+        
     }
-
+    cout<<i<<endl;
     return 0;
 }
