@@ -9,8 +9,19 @@ int main()
     cin.tie(0);
     ios::sync_with_stdio(false);
 
-    
+    string s;
+    cin>>s;
 
+    if(s.at(0) == s.at(1) && s.at(0) == s.at(2) && s.at(1) == s.at(2))
+    {
+        cout<<"No"<<endl;
+        return 0;
+    }
+    else
+    {
+        cout<<"Yes"<<endl;
+        return 0;
+    }
 
     return 0;
 }
